@@ -1,0 +1,56 @@
+	
+	
+   #paneletters{
+	   border-radius:25px;
+	   background:#da4a4a;
+	   width:99%;
+	   z-index:1;
+	   
+	   overflow-x:auto;
+	   overflow-y: hidden;
+	   white-space: nowrap;
+	   padding:5px;
+	   margin:5px;
+	   font-family:Chunkfive Ex;
+	   font-size: 52px;
+	   animation-delay: 50s;
+	   animation: fadein 3s ease-out;
+	   transition:width 2s;
+	   
+	   border-style: solid;
+    border-color:#fcce97;
+	}
+	#paneletters a{
+		text-decoration: none;
+		color:#fcce97;
+		z-index:5;
+	}
+	@keyframes fadein{
+	from{ opacity:0}
+	to{opacity:1}
+	}
+	
+	#panepicture{
+	   border-radius:25px;
+	   left:30%;
+	   z-index:0;
+	   width:99%;
+	   height:70%;
+	   margin:5px;
+	   font-family:playtime;font-size: 100px;
+	   animation: fadein 3s ease-out;
+	}
+
+::-webkit-scrollbar {
+    width: 12px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+      border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	 background-color: #b23636;
+	 
+	}

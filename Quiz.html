@@ -1,0 +1,286 @@
+
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="css/lettertable.css"/>
+  <link rel="stylesheet" type="text/css" href="css/buttons.css"/>
+  <link rel="stylesheet" type="text/css" href="css/starback.css"/>
+<style>
+    body {
+	 background:#df6666;
+	 overflow:auto;
+	 text-align:center;
+	   overflow:hidden;
+	 
+	}
+	
+	header{
+	color:#ffd249;
+	text-align:center;
+	font-family: Hanged Letters;
+	font-size: 120px;
+	animation: down 2s ease-out;
+	}
+	
+	@font-face {
+		font-family: Hanged Letters;
+		src: url("font/Hanged Letters.ttf");
+	}
+	@font-face {
+		font-family:playtime;
+		src: url("font/playtime.otf");
+	}
+
+	@font-face {
+		font-family:Chunkfive Ex;
+		src: url("font/Chunkfive Ex.ttf");
+	}
+	
+	@keyframes down{ 
+	 0% { transform: translateY(-200%); }
+	 -100% { transform: translateY(0%); }
+	}
+	
+
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+	
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+.slide {
+    top: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+	font-size:200px;
+	text-align:center;
+	color: #FFF;
+    font-family: "Chunkfive Ex";
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    height: 100%;
+}
+
+.nav label {
+	top:70%;
+	border-radius:48%;
+    display: none;
+    position: absolute;
+	opacity: 1;
+    z-index: 9;
+	width:200px;
+	height:80px;
+    cursor: pointer;
+    transition: opacity .2s;
+	object-fit:contain;
+	 border-style: dotted;
+    border-color:#fcce97;
+	border-width:10px;
+	
+    color: #FFF;
+    font-size: 58px;
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+    background-color: #56b79b;
+	animation:pop-in 1s ;
+}
+
+
+
+.nav .right:active{ 
+		background-color:green;
+		-webkit-transform: scale(1.2); 
+		}
+.nav .wrong:active{ 
+		background-color:red;
+		-webkit-transform: scale(1.2); 
+		}
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 8s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+img{ max-width:300px;max-height:300px;}
+label img{max-height:77px;width:auto;}
+
+p{
+
+color:white;
+font-family:Century Gothic;
+font-size:20px;
+}
+
+#end{
+	font-size:60px;
+	color:white;
+	top:-20%;
+	background:#56b79b;
+	width:100%;
+	height:80%;
+	border-radius:50%;
+	position:absolute;
+	padding-top:25%;
+	border-style: dotted;
+	border-color:#fcce97;
+	border-width:5px;
+}
+
+
+</style>
+</head>
+<body >
+<header> Quiz</header>
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+
+<a href="Main.html">
+ <button style="position:absolute;top:80%;left:5%;z-index:1; height: 40px; font-size:30px;">Back</button>
+ </a>
+ 
+
+
+<p>Match the picture and the letter</p>
+  <ul class="slides">
+    <input type="radio" name="radio-btn" id="Q-1" checked />
+    <li class="slide-container">
+		<div class="slide" >
+			<img src="images/window.png" />
+        </div>
+		<div class="nav">
+			<label class="wrong" style="left:0">A</label>
+			<label for="Q-2" class="right" style="right:0">W</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="Q-2" />
+    <li class="slide-container">
+        <div class="slide">
+          	<img src="images/dog.png" />
+        </div>
+		<div class="nav">
+			<label for="Q-3" class="right"style="left:0">D</label>
+			<label  class="wrong" style="right:0">F</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="Q-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/noodles.png" />
+        </div>
+		<div class="nav">
+			<label  class="wrong"  style="left:0">J</label>
+			<label for="Q-4" class="right" style="right:0">N</label>
+		</div>
+    </li>
+	<input type="radio" name="radio-btn" id="Q-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/flower.png" />
+        </div>
+		<div class="nav">
+			<label for="Q-5" class="right"  style="left:0">F</label>
+			<label  class="wrong" style="right:0">K</label>
+		</div>
+    </li>
+	<input type="radio" name="radio-btn" id="Q-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/robot.png" />
+        </div>
+		<div class="nav">
+			<label  class="wrong"  style="left:0">L</label>
+			<label for="Q-6" class="right" style="right:0">R</label>
+		</div>
+    </li>
+	<input type="radio" name="radio-btn" id="Q-6" />
+    <li class="slide-container">
+        <div class="slide">
+          X
+        </div>
+		<div class="nav">
+			<label for="Q-7" class="right"  style="left:0"> <img src="images/xylophone.png" /></label>
+			<label  class="wrong" style="right:0"> <img src="images/flower.png" /></label>
+		</div>
+    </li>
+	<input type="radio" name="radio-btn" id="Q-7" />
+    <li class="slide-container">
+        <div class="slide">
+          C
+        </div>
+		<div class="nav">
+			<label  class="wrong"  style="left:0"><img src="images/icecream.png" /></label>
+			<label for="Q-8" class="right" style="right:0"><img src="images/cow.png" /></label>
+		</div>
+    </li>
+	<input type="radio" name="radio-btn" id="Q-8" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="images/lollipop.png" />
+        </div>
+		<div class="nav">
+			<label for="Q-9" class="right"  style="left:0">L</label>
+			<label  class="wrong" style="right:0">M</label>
+		</div>
+    </li>
+	<input type="radio" name="radio-btn" id="Q-9" />
+    <li class="slide-container">
+        <div class="slide">
+          P
+        </div>
+		<div class="nav">
+			<label for="Q-10" class="right"  style="left:0"><img src="images/pizza.png" /></label>
+			<label  class="wrong" style="right:0"><img src="images/octopus.png" /></label>
+		</div>
+    </li>
+	<input type="radio" name="radio-btn" id="Q-10" />
+    <li class="slide-container">
+        <div class="slide">
+          H
+        </div>
+		<div class="nav">
+			<label  class="wrong"  style="left:0"><img src="images/gun.png" /></label>
+			<label for="Q-11" class="right" style="right:0"><img src="images/hand.png" /></label>
+		</div>
+    </li>
+ <input type="radio" name="radio-btn" id="Q-11" />
+    <li class="slide-container">
+	  <div class="slide" id="end">
+          Congratulations!
+		  You have completed the quiz.
+        </div>
+	</li>
+
+   
+</ul>
+	
+	</div>
+	</div>
+  </div>
+</body>
+</html>
